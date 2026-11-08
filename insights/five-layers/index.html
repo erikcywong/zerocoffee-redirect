@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Moved to carbonverify.org.cn — ZeroCarbon Verify</title>
+<link rel="canonical" href="https://carbonverify.org.cn/">
+<meta name="robots" content="noindex">
+<meta http-equiv="refresh" content="0; url=https://carbonverify.org.cn/">
+<meta name="description" content="The ZeroCarbon Verify site moved to carbonverify.org.cn. This page forwards every address under the old domain to the same path on the new one.">
+<style>
+  :root{--bg:#0b1016;--fg:#eef4fa;--dim:#8fa3b8;--teal:#3fe0b0;--line:rgba(255,255,255,.14)}
+  *{box-sizing:border-box}
+  body{margin:0;min-height:100vh;display:grid;place-items:center;background:radial-gradient(1100px 600px at 70% -10%,#123a45 0%,#0b1016 62%);color:var(--fg);
+       font:16px/1.65 -apple-system,'Segoe UI','PingFang SC','Microsoft YaHei',sans-serif;padding:32px}
+  .card{max-width:640px;width:100%;border:1px solid var(--line);border-radius:18px;background:rgba(255,255,255,.03);padding:34px 32px}
+  .k{font:600 11px/1 ui-monospace,monospace;letter-spacing:1.8px;text-transform:uppercase;color:var(--teal);margin-bottom:14px}
+  h1{font-size:clamp(24px,4vw,34px);letter-spacing:-.8px;margin:0 0 12px;line-height:1.2}
+  p{color:var(--dim);margin:0 0 16px}
+  .target{display:inline-block;font:600 15px/1.4 ui-monospace,monospace;color:var(--fg);background:rgba(0,196,140,.10);
+          border:1px solid rgba(0,196,140,.34);border-radius:10px;padding:12px 14px;text-decoration:none;word-break:break-all}
+  .target:hover{background:rgba(0,196,140,.18)}
+  .note{font-size:12.5px;color:#6f8398;margin-top:20px;border-top:1px solid var(--line);padding-top:16px}
+  .zh{color:#9fb0c2;font-size:13.5px;margin-top:6px}
+</style>
+</head>
+<body>
+<div class="card">
+  <div class="k">301 · moved permanently</div>
+  <h1>This site moved to carbonverify.org.cn</h1>
+  <p>The same pages, the same specification and the same registry now live under the new domain. You will be forwarded in a moment; the link below keeps the path you asked for.</p>
+  <p><a class="target" id="go" href="https://carbonverify.org.cn/">https://carbonverify.org.cn/</a></p>
+  <p class="zh">本站已迁至 carbonverify.org.cn，内容、规范与登记簿均在新域名下，稍后会自动跳转。</p>
+  <div class="note">ZeroCarbon Verify is not a certification body and issues no certification conclusions. Nothing here constitutes a tradable carbon credit.</div>
+</div>
+<script>
+(function () {
+  // keep the path and the query string when forwarding
+  var tail = location.pathname.replace(/^\/+/, '') + location.search + location.hash;
+  var url = 'https://carbonverify.org.cn/' + tail;
+  var a = document.getElementById('go');
+  a.href = url;
+  a.textContent = url;
+  location.replace(url);
+})();
+</script>
+</body>
+</html>
